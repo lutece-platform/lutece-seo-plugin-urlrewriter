@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Introduction</title>
+    </properties>
+    <body>
+        <section name="Plugin Url Rewriter">
+            <subsection name="Introduction">
+                <p>
+                    Ce plugin est basé sur le projet <a href="http://tuckey.org/urlrewrite/">UrlRewriteFilter <img src="images/urf_med.gif" /></a> de Paul Tuckey. 
+                </p> 
+                <p>
+                    Il permet de définir des urls plus simple pour les utilisateurs et facilite le référencement.
+                    Voici quelques exemples de règles définies par défaut par le plugin :
+                </p>
+                <p>
+                    <table>
+                        <tr>
+                            <th>New url</th>
+                            <th>For</th>
+                        </tr>
+                        <tr>
+                            <td>/page/<i>n</i></td>
+                            <td>/jsp/site/Portal.jsp?page_id=<i>n</i></td>
+                        </tr>
+                        <tr>
+                            <td>/app/<i>xpage</i></td>
+                            <td>/jsp/site/Portal.jsp?page=<i>xpage</i></td>
+                        </tr>
+                        <tr>
+                            <td>/map</td>
+                            <td>/jsp/site/Portal.jsp?page=<i>map</i></td>
+                        </tr>
+                    </table>
+                </p>
+            </subsection>
+            <subsection name="Configuration">
+                <p>
+                    Le fichier contenant les règles de réécriture est <code>WEB-INF/plugins/urlrewriter/urlrewrite.xml</code>.
+                    Reportez vous à la documentation du projet UrlRewriteFilter pour créer vos propres règles. 
+                </p> 
+            </subsection>
+        </section>
+    </body>
+</document>

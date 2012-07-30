@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Introduction</title>
+    </properties>
+    <body>
+        <section name="Plugin Url Rewriter">
+            <subsection name="Introduction">
+                <p>
+                    This plugin is based on the <strong>Paul Tuckey</strong>'s 
+                    <a href="http://tuckey.org/urlrewrite/">UrlRewriteFilter project <img src="images/urf_med.gif" /></a>
+                </p> 
+                <p>
+                    This plugin allows to define more friendly url to access to the site pages.
+                    Here is some default rules defined by the plugin :
+                </p>
+                <p>
+                    <table>
+                        <tr>
+                            <th>New url</th>
+                            <th>For</th>
+                        </tr>
+                        <tr>
+                            <td>/page/<i>n</i></td>
+                            <td>/jsp/site/Portal.jsp?page_id=<i>n</i></td>
+                        </tr>
+                        <tr>
+                            <td>/app/<i>xpage</i></td>
+                            <td>/jsp/site/Portal.jsp?page=<i>xpage</i></td>
+                        </tr>
+                        <tr>
+                            <td>/map</td>
+                            <td>/jsp/site/Portal.jsp?page=<i>map</i></td>
+                        </tr>
+                    </table>
+                </p>
+            </subsection>
+            <subsection name="Configuration">
+                <p>
+                    The file that contains all rewriting rules is <code>WEB-INF/plugins/urlrewriter/urlrewrite.xml</code>.
+                    See the UrlRewriteFilter documentation to set your own rules. 
+                </p> 
+            </subsection>
+        </section>
+    </body>
+</document>
