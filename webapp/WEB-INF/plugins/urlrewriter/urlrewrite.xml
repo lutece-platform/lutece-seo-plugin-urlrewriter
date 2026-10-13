@@ -10,15 +10,6 @@
 -->
 <urlrewrite>
 
-    <rule>
-        <note>
-            The rule means that requests to /test/status/ will be redirected to /rewrite-status
-            the url will be rewritten.
-        </note>
-        <from>/test/status/</from>
-        <to type="redirect">%{context-path}/rewrite-status</to>
-    </rule>
-
         <rule>
             <from>/page/([0-9]+)</from>
             <to>/jsp/site/Portal.jsp?page_id=$1</to>
@@ -31,19 +22,6 @@
             <from>/map</from>
             <to>/jsp/site/Portal.jsp?page=map</to>
         </rule>
-
-    <outbound-rule>
-        <note>
-            The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url)
-            the url /rewrite-status will be rewritten to /test/status/.
-
-            The above rule and this outbound-rule means that end users should never see the
-            url /rewrite-status only /test/status/ both in thier location bar and in hyperlinks
-            in your pages.
-        </note>
-        <from>/rewrite-status</from>
-        <to>/test/status/</to>
-    </outbound-rule>
 
 
     <!--
